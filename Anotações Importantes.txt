@@ -1,0 +1,42 @@
+Alguns comandos básico de SQL Server;
+
+Criando uma tabela:
+CREATE TABLE TBEXEMPLO
+(ID VARCHAR(4) NOT NULL,
+NOME VARCHAR(40) NOT NULL,
+TELEFONE VARCHAR(10) NOT NULL,
+VALOR DECIMAL(6,2) NOT NULL);
+
+Deletando uma tabela:
+DROP TABLE TBEXEMPLO;
+
+Alterando uma tabela adicionando uma nova coluna:
+ALTER TABLE TBEXEMPLO ADD COLUMN (FAX VARCHAR(10) NOT NULL);
+
+Alterando uma tabela modificando uma coluna:
+ALTER TABLE TBEXEMPLO MODIFY COLUMN (TELEFONE VARCHAR(12));
+
+Inserindo dados:
+INSERT INTO TBEXEMPLO VALUES ('2006', 'Rodrigo', '4466',10.95);
+
+Alterando dados:
+UPDATE TBEXEMPLO SET VALOR = 120 WHERE ID = '2006';
+
+Deletando dados:
+DELETE FROM TBEXEMPLO WHERE ID = '2006';
+
+ 
+
+Para a consulta de dados:
+
+
+SELECT coluna1, coluna2, ...
+FROM tabela1, tabela2, ...
+[ WHERE coluna1 = 'valor1'
+AND coluna2 = 'valor2'
+OR (coluna1 = 'valor3'
+AND coluna2 = 'valor4')]
+[GROUP BY coluna1, coluna2, ...]
+[HAVING function = 'valor']
+[ORDER BY coluna1, coluna2, ...];
+
